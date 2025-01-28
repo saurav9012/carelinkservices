@@ -1055,6 +1055,13 @@
       instaBtn.className = "social-btn instagram-btn";
       instaBtn.innerHTML = '<i class="fab fa-instagram"></i>';
 
+      // Create Facebook Button
+      const facebookBtn = document.createElement("a");
+      facebookBtn.href = "https://www.facebook.com/share/12D1gqqpL96/";
+      facebookBtn.target = "_blank";
+      facebookBtn.className = "social-btn facebook-btn";
+      facebookBtn.innerHTML = '<i class="fab fa-facebook"></i>';
+
       // Add WhatsApp functionality
       const whatsappBtn = document.createElement("a");
       whatsappBtn.href = `https://wa.me/919400950302?text=${encodeURIComponent(
@@ -1067,6 +1074,7 @@
       // Append buttons to container
       buttonsContainer.appendChild(whatsappBtn);
       buttonsContainer.appendChild(instaBtn);
+      buttonsContainer.appendChild(facebookBtn);
       socialContainer.appendChild(buttonsContainer);
       socialContainer.appendChild(toggleBtn);
 
