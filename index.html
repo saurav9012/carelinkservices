@@ -1043,31 +1043,59 @@
       document.body.appendChild(s);
     </script>
 
-    <script>
-      var instaBtn = document.createElement("a");
-      instaBtn.href =
-        "https://www.instagram.com/care_.link?igsh=MXR0d3M2azQ3YjBvNQ=="; // Replace with your Instagram profile URL
-      instaBtn.target = "_blank";
-      instaBtn.style.position = "fixed";
-      instaBtn.style.bottom = "80px"; // Adjust position
-      instaBtn.style.right = "20px";
-      instaBtn.style.background = "#E4405F";
-      instaBtn.style.color = "white";
-      instaBtn.style.padding = "12px 15px";
-      instaBtn.style.borderRadius = "50%";
-      instaBtn.style.boxShadow = "2px 2px 10px rgba(0, 0, 0, 0.2)";
-      instaBtn.style.fontSize = "24px";
-      instaBtn.style.textAlign = "center";
-      instaBtn.innerHTML = '<i class="fab fa-instagram"></i>'; // Font Awesome Instagram Icon
-
-      document.body.appendChild(instaBtn);
-    </script>
-
-    <!-- Font Awesome for Instagram Icon -->
+    <!-- Font Awesome CSS -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
+
+    <!-- insta -->
+    <script>
+      var instaBtn = document.createElement("a");
+      instaBtn.href =
+        "https://www.instagram.com/care_.link?igsh=MXR0d3M2azQ3YjBvNQ==";
+      instaBtn.target = "_blank";
+      instaBtn.className = "instagram-floating-btn";
+
+      // Create the icon element
+      var icon = document.createElement("i");
+      icon.className = "fab fa-instagram";
+      instaBtn.appendChild(icon);
+
+      // Add styles
+      var styles = `
+  .instagram-floating-btn {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  .instagram-floating-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .instagram-floating-btn i {
+    font-size: 20px;
+  }
+`;
+
+      var styleSheet = document.createElement("style");
+      styleSheet.textContent = styles;
+      document.head.appendChild(styleSheet);
+      document.body.appendChild(instaBtn);
+    </script>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
