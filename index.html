@@ -1062,6 +1062,13 @@
       facebookBtn.className = "social-btn facebook-btn";
       facebookBtn.innerHTML = '<i class="fab fa-facebook"></i>';
 
+      const youtubBtn = document.createElement("a");
+      youtubBtn.href =
+        "https://youtube.com/@carelink_services?si=t4QpAh1VtQdn-tK2";
+      youtubBtn.target = "_blank";
+      youtubBtn.className = "social-btn youtube-btn";
+      youtubBtn.innerHTML = '<i class="fab fa-youtube"></i>';
+
       // Add WhatsApp functionality
       const whatsappBtn = document.createElement("a");
       whatsappBtn.href = `https://wa.me/919400950302?text=${encodeURIComponent(
@@ -1075,6 +1082,7 @@
       buttonsContainer.appendChild(whatsappBtn);
       buttonsContainer.appendChild(instaBtn);
       buttonsContainer.appendChild(facebookBtn);
+      buttonsContainer.appendChild(youtubBtn);
       socialContainer.appendChild(buttonsContainer);
       socialContainer.appendChild(toggleBtn);
 
@@ -1155,6 +1163,10 @@
 
   .facebook-btn {
     background-color: #1877F2;
+  }
+  
+  .youtube-btn {
+    background-color: #FF0000; 
   }
 
   .social-btn i {
