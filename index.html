@@ -8,7 +8,7 @@
     <meta content="" name="description" />
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon" />
+    <!-- <link href="img/favicon.ico" rel="icon" /> -->
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,12 +29,12 @@
     />
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <!-- <link href="lib/animate/animate.min.css" rel="stylesheet" />
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
     <link
       href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
       rel="stylesheet"
-    />
+    /> -->
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
@@ -131,11 +131,6 @@
                   class="row align-items-center justify-content-center justify-content-lg-start"
                 >
                   <div class="col-10 col-lg-7 text-center text-lg-start">
-                    <!-- <h6
-                      class="text-white text-uppercase mb-3 animated slideInDown"
-                    >
-                      A clean car isn't just a vehicle; it's a statement
-                    </h6> -->
                     <h1
                       class="display-3 text-white mb-4 pb-3 animated slideInDown"
                     >
@@ -210,11 +205,18 @@
                     >
                       Good design nurtures the soul, not just the eye
                     </h1>
-                    <a
+                    <!-- <a
                       href=""
                       class="btn btn-primary py-3 px-5 animated slideInDown"
                       >Get Our Service<i class="fa fa-arrow-right ms-3"></i
-                    ></a>
+                    ></a> -->
+                    <a
+                      href="javascript:void(0);"
+                      id="openPopupBtn"
+                      class="btn btn-primary py-3 px-5 animated slideInDown"
+                    >
+                      Get Our Service<i class="fa fa-arrow-right ms-3"></i>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -243,7 +245,14 @@
       </div>
     </div>
     <!-- Carousel End -->
-
+    <!-- modal popup -->
+    <div id="popupModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div id="popupContent"></div>
+      </div>
+    </div>
+    <!-- modal end -->
     <!-- Service Start -->
 
     <div class="container-xxl py-5">
@@ -1201,14 +1210,16 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/tempusdominus/js/moment.min.js"></script>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script> -->
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
