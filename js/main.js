@@ -68,44 +68,6 @@
     });
 
 
-    // Facts counter
-    // $('[data-toggle="counter-up"]').counterUp({
-    //     delay: 10,
-    //     time: 2000
-    // });
-
-
-    // // Date and time picker
-    // $('.date').datetimepicker({
-    //     format: 'L'
-    // });
-    // $('.time').datetimepicker({
-    //     format: 'LT'
-    // });
-
-
-    // // Testimonials carousel
-    // $(".testimonial-carousel").owlCarousel({
-    //     autoplay: true,
-    //     smartSpeed: 1000,
-    //     center: true,
-    //     margin: 25,
-    //     dots: true,
-    //     loop: true,
-    //     nav: false,
-    //     responsive: {
-    //         0: {
-    //             items: 1
-    //         },
-    //         768: {
-    //             items: 2
-    //         },
-    //         992: {
-    //             items: 3
-    //         }
-    //     }
-    // });
-
     $(document).ready(function () {
         // Debugging: Check if the button exists
         if ($("#openPopupBtn").length) {
@@ -131,49 +93,73 @@
 
 })(jQuery);
 
-$(document).ready(function () {
-    const modal = document.getElementById('popupModal');
-    const popupContent = document.getElementById('popupContent');
-    const closeBtn = document.querySelector('.close-btn');
 
-    // Close modal when clicking the close button
-    closeBtn.onclick = function () {
-        modal.style.display = "none";
+// document.addEventListener('DOMContentLoaded', function () {
+//     const openBtn = document.getElementById('openPopupBtn');
+//     const popup = document.getElementById('popup');
+//     const closeBtn = popup.querySelector('.close');
+
+//     openBtn.addEventListener('click', function () {
+//         popup.style.display = 'flex';
+//     });
+
+//     closeBtn.addEventListener('click', function () {
+//         popup.style.display = 'none';
+//     });
+
+//     // Close popup when clicking outside
+//     window.addEventListener('click', function (event) {
+//         if (event.target === popup) {
+//             popup.style.display = 'none';
+//         }
+//     });
+// });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const openBtn = document.getElementById('openPopupBtn');
+    const popup = document.getElementById('popup');
+    const closeBtn = popup.querySelector('.close'); // Corrected selector
+
+    if (!openBtn || !popup || !closeBtn) {
+        console.error("Element missing: Make sure #openPopupBtn, #popup, and .close exist in your HTML.");
+        return;
     }
 
-    // Close modal when clicking outside
-    window.onclick = function (event) {
-        if (event.target === modal) {
-            modal.style.display = "none";
+    openBtn.addEventListener('click', function () {
+        popup.style.display = 'flex'; // Ensure popup is shown
+    });
+
+    closeBtn.addEventListener('click', function () {
+        popup.style.display = 'none'; // Hide popup
+    });
+
+    // Close popup when clicking outside
+    window.addEventListener('click', function (event) {
+        if (event.target === popup) {
+            popup.style.display = 'none';
         }
-    }
-
-    // Check if button exists and add click handler
-    if ($("#openPopupBtn").length) {
-        console.log("Button found!");
-
-        $("#openPopupBtn").on("click", function () {
-            console.log("Button clicked! Loading popup content...");
-
-            fetch("popup.html")
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.text();
-                })
-                .then(data => {
-                    popupContent.innerHTML = data;
-                    modal.style.display = "block";
-                })
-                .catch(error => {
-                    console.error("Error loading popup content:", error);
-                    popupContent.innerHTML = "Error loading content. Please try again.";
-                    modal.style.display = "block";
-                });
-        });
-    } else {
-        console.error("Button not found!");
-    }
+    });
 });
 
+
+
+// document.addEventListener('DOMContentLoaded', function () {
+//     const openBtn = document.getElementById('openPopupBtn');
+//     const popup = document.getElementById('popup');
+//     const closeBtn = popup.querySelector('.close');
+
+//     openBtn.addEventListener('click', function () {
+//         popup.classList.add('show'); // Apply show class to animate
+//     });
+
+//     closeBtn.addEventListener('click', function () {
+//         popup.classList.remove('show'); // Remove show class to animate out
+//     });
+
+//     // Close when clicking outside the popup content
+//     window.addEventListener('click', function (event) {
+//         if (event.target === popup) {
+//             popup.classList.remove('show');
+//         }
+//     });
+// });

@@ -195,21 +195,11 @@
                   class="row align-items-center justify-content-center justify-content-lg-start"
                 >
                   <div class="col-10 col-lg-7 text-center text-lg-start">
-                    <!-- <h6
-                      class="text-white text-uppercase mb-3 animated slideInDown"
-                    >
-                      Good design nurtures the soul, not just the eye
-                    </h6> -->
                     <h1
                       class="display-3 text-white mb-4 pb-3 animated slideInDown"
                     >
                       Good design nurtures the soul, not just the eye
                     </h1>
-                    <!-- <a
-                      href=""
-                      class="btn btn-primary py-3 px-5 animated slideInDown"
-                      >Get Our Service<i class="fa fa-arrow-right ms-3"></i
-                    ></a> -->
                     <a
                       href="javascript:void(0);"
                       id="openPopupBtn"
@@ -217,6 +207,56 @@
                     >
                       Get Our Service<i class="fa fa-arrow-right ms-3"></i>
                     </a>
+                    <!-- popup starts code end -->
+
+                    <div id="popup" class="popup" style="display: none">
+                      <div class="popup-content">
+                        <span class="close">&times;</span>
+                        <h2>Get Our Services</h2>
+
+                        <form id="serviceForm">
+                          <div>
+                            <label for="name">Name:</label><br />
+                            <input type="text" id="name" name="name" required />
+                          </div>
+                          <br />
+                          <div>
+                            <label for="email">Email:</label><br />
+                            <input
+                              type="email"
+                              id="email"
+                              name="email"
+                              required
+                            />
+                          </div>
+                          <br />
+                          <div>
+                            <label for="service">Select Service:</label><br />
+                            <select id="service" name="service" required>
+                              <option value="">Car Wash</option>
+                              <option value="web">Bike Wash</option>
+                              <option value="mobile">House Keeping</option>
+                              <option value="design">
+                                Architectural Designs
+                              </option>
+                            </select>
+                          </div>
+                          <br />
+                          <div>
+                            <label for="message">Message:</label><br />
+                            <textarea
+                              id="message"
+                              name="message"
+                              rows="4"
+                            ></textarea>
+                          </div>
+                          <br />
+                          <button type="submit">Submit</button>
+                        </form>
+                      </div>
+                    </div>
+
+                    <!-- popup code end -->
                   </div>
                 </div>
               </div>
