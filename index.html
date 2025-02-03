@@ -172,10 +172,27 @@
                       A clean home is a happy home
                     </h1>
                     <a
-                      href=""
-                      class="btn btn-primary py-3 px-5 animated slideInDown"
+                      href="#"
+                      onclick="openModal()"
+                      id="modal-overlay"
+                      class="modal-overlay btn btn-primary py-3 px-5 animated slideInDown"
                       >Get Our Service<i class="fa fa-arrow-right ms-3"></i
                     ></a>
+                    <script>
+                      function openModal() {
+                        // Load the modal content from the separate HTML file
+                        console.log("testing");
+                        fetch("modal.html")
+                          .then((response) => response.text())
+                          .then((html) => {
+                            document.getElementById("modal-content").innerHTML =
+                              html;
+                            document.getElementById(
+                              "modal-overlay"
+                            ).style.display = "flex";
+                          });
+                      }
+                    </script>
                   </div>
                 </div>
               </div>
@@ -200,6 +217,7 @@
                     >
                       Good design nurtures the soul, not just the eye
                     </h1>
+
                     <a
                       href="javascript:void(0);"
                       id="openPopupBtn"
