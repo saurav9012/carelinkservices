@@ -395,10 +395,15 @@
     </div> -->
     <footer style="background-color: #34495e; color: white; padding: 20px">
       <div
-        style="display: flex; justify-content: space-around; flex-wrap: wrap"
+        style="
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          gap: 20px;
+        "
       >
         <!-- Quick Links Section -->
-        <div>
+        <div style="flex: 1; min-width: 200px">
           <h4 style="color: #f39c12">Quick Links</h4>
           <ul style="list-style: none; padding: 0">
             <li>
@@ -423,18 +428,18 @@
         </div>
 
         <!-- Location Section -->
-        <div>
+        <div style="flex: 1; min-width: 200px">
           <h4 style="color: #f39c12">Location</h4>
           <p>📍 Thaliparamba</p>
         </div>
 
         <!-- Contact Info Section -->
-        <div>
+        <div style="flex: 1; min-width: 200px">
           <h4 style="color: #f39c12">Contact Us</h4>
           <p>
             📧
             <a
-              href="mailto:carelink@example.com"
+              href="mailto:getcarelinkservices@gmail.com"
               style="color: white; text-decoration: none"
               >getcarelinkservices@gmail.com</a
             >
@@ -462,6 +467,25 @@
       <div style="text-align: center; margin-top: 20px">
         &copy; 2024 CareLink Services. All rights reserved.
       </div>
+
+      <!-- Responsive CSS for Mobile View -->
+      <style>
+        @media (max-width: 768px) {
+          footer div {
+            flex: 1 1 100%; /* Makes each section take full width */
+            text-align: center; /* Centers text for better readability */
+          }
+
+          footer h4 {
+            margin-bottom: 10px;
+          }
+
+          footer p,
+          footer li {
+            margin: 5px 0;
+          }
+        }
+      </style>
     </footer>
 
     <!-- Footer End -->
