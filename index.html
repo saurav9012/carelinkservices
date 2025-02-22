@@ -98,20 +98,26 @@
             target="_blank"
             >Book Now <i class="fab fa-whatsapp"></i
           ></a>
-          <!-- <a
-            href="#"
-            class="btn btn-primary py-2 py-lg-4 px-3 px-lg-5 orange-btn"
-          >
-            Book Now
-            <i class="fa fa-arrow-right ms-3"></i>
-          </a> -->
-          <!-- <a href="#" class="btn btn-primary nav-btn">
-            Book Now
-            <i class="fa fa-arrow-right ms-2"></i>
-          </a> -->
         </div>
       </div>
     </nav>
+
+    <script>
+      // Automatically close the navbar on mobile when a link is clicked
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          const navbarCollapse = document.getElementById("navbarCollapse");
+
+          // Check if the navbar is open AND the screen width is less than 992px (Bootstrap's breakpoint for mobile)
+          if (
+            window.innerWidth < 992 &&
+            navbarCollapse.classList.contains("show")
+          ) {
+            new bootstrap.Collapse(navbarCollapse).hide(); // Close the navbar
+          }
+        });
+      });
+    </script>
     <!-- Navbar End -->
 
     <!-- Carousel Start -->
